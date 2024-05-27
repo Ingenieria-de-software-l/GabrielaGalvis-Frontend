@@ -1,0 +1,33 @@
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+  <div class="form1">
+
+    <h1>Formulario de Referencia</h1>
+    <label> Nombre de la referencia </label>
+    <input type="text" [(ngModel)]="nombre" name="nombre" />
+
+    <label> Ocupacion </label>
+    <input type="text" [(ngModel)]="ocupacion" name="ocupacion" />
+
+    <Label>Parentesco</Label>
+    <input type="text" [(ngModel)]="parentesco" name="parentesco" />
+
+    <Label>Telefono</Label>
+    <input type="text" [(ngModel)]="telefono" name="telefono" />
+
+    <div class="btn">
+      <div class="right">
+        <button>Guardar informacion</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="btn">
+  <div class="right">
+    <button routerLink="/formulario-laboral">Siguiente</button>
+  </div>
+
+  <div class="left">
+    <button routerLink="/formulario-estudio">Atras</button>
+  </div>
+</div>

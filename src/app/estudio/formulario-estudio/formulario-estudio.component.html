@@ -1,0 +1,30 @@
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+  <div class="form1">
+    <h1>Formulario de Estudio</h1>
+    <label> Nombre del instituto </label>
+    <input type="text" [(ngModel)]="nombre" name="nombre" />
+
+    <label> Lugar donde se graduo: </label>
+    <input type="text" [(ngModel)]="lugarGrado" name="lugar" />
+
+    <label> Año de grado </label>
+    <input type="date" [(ngModel)]="anio" name="anio" />
+
+    <div class="btn">
+      <div class="right">
+        <button>Guardar informacion</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="btn">
+  <div class="right">
+    <button routerLink="/formulario-referencia">Siguiente</button>
+  </div>
+
+  <div class="left">
+    <button routerLink="/formulario-personal">Atras</button>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+<div class = "form1">
+  <h1>Formulario Laboral</h1>
+  <label> Nombre de la empresa </label>
+  <input type="text" [(ngModel)]="nombreEmpresa" name="nombre">
+
+  <label>Direccion de la empresa</label>
+  <input type="text" [(ngModel)]="direccionEmpresa" name="direccion">
+
+  <label>Telefono de la empresa</label>
+  <input type="text" [(ngModel)]="telefonoEmpresa" name="telefono">
+
+  <label> Cargo </label>
+  <input type="text" [(ngModel)]="cargo" name="cargo">
+
+  <label>Nombre del jefe</label>
+  <input type="text" [(ngModel)]="nombreJefe" name="jefe">
+
+  <label>Fecha de inicio</label>
+  <input type="date" [(ngModel)]="fechaInicio" name="inicio">
+
+  <label>Fecha de fin</label>
+  <input type="date" [(ngModel)]="fechaFin" name="fin">
+
+  <div class="btn">
+    <div class="right">
+      <button>Guardar informacion</button>
+    </div>
+  </div>
+</div>
+</form>
+
+<div class="btn">
+  <div class="right">
+    <button routerLink="/">Siguiente</button>
+  </div>
+
+  <div class="left">
+    <button routerLink="/formulario-estudio">Atras</button>
+  </div>
+</div>
+
