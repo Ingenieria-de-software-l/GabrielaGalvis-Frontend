@@ -18,6 +18,8 @@
   overflow: hidden; /* Para asegurarse de que el contenido no se desborde */
   border-top-left-radius: 10px; /* Alinea los bordes con el contenedor principal */
   border-top-right-radius: 10px;
+  display: flex;
+  
 }
 
 /* Estilo para el banner */

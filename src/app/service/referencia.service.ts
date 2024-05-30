@@ -18,7 +18,7 @@ export class ReferenciaService {
   }
 
   public save(referencia: Referencia): Observable<any> {
-    return this.httpClient.post<any>(this.referenciaURL + 'createReferenciaa', referencia);
+    return this.httpClient.post<any>(this.referenciaURL + 'createReferencia', referencia);
   }
 
 }

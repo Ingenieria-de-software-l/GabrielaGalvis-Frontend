@@ -1,26 +1,26 @@
 export class Personal {
 
   public identificacion:string;
-  public nombre:string;
-  public apellidos:string;
-  public sexo:string;
-  public email:string;
-  public telefono:string;
-  public direccion:string;
-  public fechaNacimiento:Date;
+  public nombrePersona:string;
+  public apellidoPersona:string;
+  public sexoPersona:string;
+  public correoPersona:string;
+  public telefonoPersona:string;
+  public direccionPersona:string;
+  public fechaNacimientoPersona:Date;
   public ocupacion:string;
   public estadoCivil:string;
 
 
-  constructor(identificacion:string,nombre:string,apellidos:string,sexo:string,email:string,telefono:string,direccion:string,fechaNacimiento:Date,ocupacion:string,estadoCivil:string) {
+  constructor(identificacion:string,nombrePersona:string,apellidoPersona:string,sexoPersona:string,correoPersona:string,telefonoPersona:string,direccionPersona:string,fechaNacimientoPersona:Date,ocupacion:string,estadoCivil:string) {
     this.identificacion = identificacion;
-    this.nombre = nombre;
-    this.apellidos = apellidos;
-    this.sexo = sexo;
-    this.email = email;
-    this.telefono = telefono;
-    this.direccion = direccion;
-    this.fechaNacimiento = fechaNacimiento;
+    this.nombrePersona = nombrePersona;
+    this.apellidoPersona = apellidoPersona;
+    this.sexoPersona = sexoPersona;
+    this.correoPersona = correoPersona;
+    this.telefonoPersona = telefonoPersona;
+    this.direccionPersona = direccionPersona;
+    this.fechaNacimientoPersona = fechaNacimientoPersona;
     this.ocupacion = ocupacion;
     this.estadoCivil = estadoCivil;
   }

@@ -19,7 +19,7 @@ export class PersonalService {
   }
 
   public save(personal: Personal): Observable<any> {
-    return this.httpClient.post<any>(this.personalURL + 'createPersonall', personal);
+    return this.httpClient.post<any>(this.personalURL + 'createPersonal', personal);
   }
 
 

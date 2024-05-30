@@ -1,13 +1,13 @@
 export class Referencia {
 
-  public nombre: string;
-  public ocupacion: string;
+  public nombreRef: string;
+  public ocupacionRef: string;
   public parentesco: string;
   public telefono: string;
 
-  constructor(nombre:string, ocupacion:string, parentesco:string, telefono:string) {
-    this.nombre = nombre;
-    this.ocupacion = ocupacion;
+  constructor(nombreRef:string, ocupacionRef:string, parentesco:string, telefono:string) {
+    this.nombreRef = nombreRef;
+    this.ocupacionRef = ocupacionRef;
     this.parentesco = parentesco;
     this.telefono = telefono;
   }
