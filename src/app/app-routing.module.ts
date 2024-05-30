@@ -5,9 +5,10 @@ import { FormularioLaboralComponent } from './laboral/formulario-laboral/formula
 import { FormularioReferenciaComponent } from './referencia/formulario-referencia/formulario-referencia.component';
 import { FormularioPersonalComponent } from './personal/formulario-personal/formulario-personal.component';
 import { ListaGeneralComponent } from './lista/lista-general/lista-general.component';
+import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 
 const routes: Routes = [
-  {path: '', component: ListaGeneralComponent},
+  {path: '', component: FormularioUsuarioComponent},
   {path: 'formulario-estudio', component: FormularioEstudioComponent},
   {path: 'formulario-laboral', component: FormularioLaboralComponent},
   {path: 'formulario-referencia', component: FormularioReferenciaComponent},

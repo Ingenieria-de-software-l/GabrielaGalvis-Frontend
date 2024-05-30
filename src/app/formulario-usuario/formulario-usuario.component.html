@@ -1,0 +1,83 @@
+<form (ngSubmit)="onCreateUsuario()" novalidate #f="ngForm">
+    <div class="form1">
+        <h1>Formulario de Personal</h1>
+
+        <label> Identificacion </label>
+        <input type="text" [(ngModel)]="identificacion" name="identificacion" />
+
+        <label> Nombre </label>
+        <input type="text" [(ngModel)]="nombre" name="nombre" />
+
+        <label> Apellidos </label>
+        <input type="text" [(ngModel)]="apellidos" name="apellidos" />
+
+        <label> Sexo </label>
+        <input type="text" [(ngModel)]="sexo" name="sexo" />
+
+        <label> Email </label>
+        <input type="text" [(ngModel)]="email" name="email" />
+
+        <label> Telefono </label>
+        <input type="text" [(ngModel)]="telefono" name="telefono" />
+
+        <label> Direccion </label>
+        <input type="text" [(ngModel)]="direccion" name="direccion" />
+
+        <label> Fecha de Nacimiento </label>
+        <input type="date" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" />
+
+        <label> Ocupacion </label>
+        <input type="text" [(ngModel)]="ocupacion" name="ocupacion" />
+
+        <label> Estado Civil </label>
+        <input type="text" [(ngModel)]="estadoCivil" name="estadoCivil" />
+
+        <label> Nombre del instituto </label>
+        <input type="text" [(ngModel)]="nombreEstudio" name="nombre" />
+
+        <label> Lugar donde se graduo: </label>
+        <input type="text" [(ngModel)]="lugarGrado" name="lugar" />
+
+        <label> Año de grado </label>
+        <input type="date" [(ngModel)]="anio" name="anio" />
+
+        <label> Nombre de la empresa </label>
+        <input type="text" [(ngModel)]="nombreEmpresa" name="nombre">
+
+        <label>Direccion de la empresa</label>
+        <input type="text" [(ngModel)]="direccionEmpresa" name="direccion">
+
+        <label>Telefono de la empresa</label>
+        <input type="text" [(ngModel)]="telefonoEmpresa" name="telefono">
+
+        <label> Cargo </label>
+        <input type="text" [(ngModel)]="cargo" name="cargo">
+
+        <label>Nombre del jefe</label>
+        <input type="text" [(ngModel)]="nombreJefe" name="jefe">
+
+        <label>Fecha de inicio</label>
+        <input type="date" [(ngModel)]="fechaInicio" name="inicio">
+
+        <label>Fecha de fin</label>
+        <input type="date" [(ngModel)]="fechaFin" name="fin">
+
+        <label> Nombre de la referencia </label>
+        <input type="text" [(ngModel)]="nombreReferencia" name="nombre" />
+    
+        <label> Ocupacion </label>
+        <input type="text" [(ngModel)]="ocupacionReferencia" name="ocupacion" />
+    
+        <Label>Parentesco</Label>
+        <input type="text" [(ngModel)]="parentesco" name="parentesco" />
+    
+        <Label>Telefono</Label>
+        <input type="text" [(ngModel)]="telefonoReferencia" name="telefono" />
+
+        <div class="btn">
+            <div class="right">
+                <button>Guardar informacion</button>
+            </div>
+        </div>
+    </div>
+</form>

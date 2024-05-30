@@ -13,6 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ListaGeneralComponent } from './lista/lista-general/lista-general.component';
 import { BienvenidaComponent } from './inicio/bienvenida/bienvenida.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { BienvenidaComponent } from './inicio/bienvenida/bienvenida.component';
     FormularioPersonalComponent,
     FormularioReferenciaComponent,
     ListaGeneralComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    UsuarioComponent,
+    FormularioUsuarioComponent
   ],
   imports: [
     BrowserModule,
