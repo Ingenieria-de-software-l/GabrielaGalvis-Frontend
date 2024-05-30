@@ -12,7 +12,7 @@ export class UsuarioService {
   constructor(private httpClient: HttpClient) { }
 
   public listar(): Observable<Usuario[]> {
-    return this.httpClient.get<Usuario[]>(this.laboralURL + 'listaLaboral');
+    return this.httpClient.get<Usuario[]>(this.laboralURL + 'listaUsuario');
   }
 
   public save(usuario: Usuario): Observable<any> {

@@ -1,0 +1,10 @@
+.form1 h1 {
+    font-family: 'Arial', sans-serif; /* Cambiar la fuente si es necesario */
+    font-size: 24px; /* Tamaño de fuente adecuado */
+    font-weight: bold; /* Asegura que el encabezado sea prominente */
+    color: #333; /* Color de texto */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+    padding-bottom: 10px; /* Espacio dentro del encabezado */
+    border-bottom: 2px solid #007bff; /* Línea decorativa debajo del encabezado */
+  }

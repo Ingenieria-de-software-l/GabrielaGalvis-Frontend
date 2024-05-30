@@ -1,0 +1,23 @@
+<div class="card mb-4">
+    <div class="card-header">
+      <h3 class="card-title text-center">{{ usuario.personal.nombrePersona }} {{ usuario.personal.apellidoPersona }}</h3>
+    </div>
+    <div class="card-body">
+      <h5 class="card-subtitle mb-2 text-muted">Información Personal</h5>
+      <p class="card-text">Identificación: {{ usuario.personal.identificacion }}</p>
+      <p class="card-text">Email: {{ usuario.personal.correoPersona }}</p>
+      <p class="card-text">Teléfono: {{ usuario.personal.telefonoPersona }}</p>
+  
+      <h5 class="card-subtitle mb-2 text-muted">Lugar de Trabajo</h5>
+      <p class="card-text">Empresa: {{ usuario.laboral.nombreEmpresa }}</p>
+      <p class="card-text">Dirección: {{ usuario.laboral.direccionEmpresa }}</p>
+      <p class="card-text">Teléfono: {{ usuario.laboral.telefonoEmpresa }}</p>
+      <p class="card-text">Cargo: {{ usuario.laboral.cargo }}</p>
+  
+      <h5 class="card-subtitle mb-2 text-muted">Referencia</h5>
+      <p class="card-text">Nombre: {{ usuario.referencia.nombreRef }}</p>
+      <p class="card-text">Ocupación: {{ usuario.referencia.ocupacionRef }}</p>
+      <p class="card-text">Teléfono: {{ usuario.referencia.telefono }}</p>
+    </div>
+  </div>
+  

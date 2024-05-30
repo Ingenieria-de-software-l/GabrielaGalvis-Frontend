@@ -8,7 +8,9 @@ import { ListaGeneralComponent } from './lista/lista-general/lista-general.compo
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 
 const routes: Routes = [
-  {path: '', component: FormularioUsuarioComponent},
+  {path: '', component: ListaGeneralComponent},
+  {path: 'formulario', component: FormularioUsuarioComponent},
+  {path: 'lista', component: ListaGeneralComponent},
   {path: 'formulario-estudio', component: FormularioEstudioComponent},
   {path: 'formulario-laboral', component: FormularioLaboralComponent},
   {path: 'formulario-referencia', component: FormularioReferenciaComponent},

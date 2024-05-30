@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { forkJoin } from 'rxjs';
 import { PersonalService } from '../service/personal.service';
 import { Personal } from '../modelo/personal/personal';
 import { Estudio } from '../modelo/estudio/estudio';
@@ -9,6 +10,7 @@ import { LaboralService } from '../service/laboral.service';
 import { Laboral } from '../modelo/laboral/laboral';
 import { UsuarioService } from '../service/usuario.service';
 import { Usuario } from '../modelo/usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-usuario',
@@ -41,40 +43,44 @@ export class FormularioUsuarioComponent {
   fechaFin: Date = new Date();
   cargo: string = '';
 
-  constructor(
-    private personalService: PersonalService,
-    private estudioService: EstudioService,
-    private referenciaService: ReferenciaService,
-    private laboralService: LaboralService,
+  constructor(private router: Router,
     private usuarioService: UsuarioService
   ) {}
 
   public onCreateUsuario(): void {
-    const personal = new Personal(this.identificacion, this.nombre, this.apellidos, this.sexo, this.email, this.telefono, this.direccion, this.fechaNacimiento, this.ocupacion, this.estadoCivil);
-    this.personalService.save(personal).subscribe(data => {
-      
-    })
-    const estudio = new Estudio(this.nombreEstudio, this.lugarGrado, this.anio);
-    this.estudioService.save(estudio).subscribe(data => {
-      
-    })
-    const referencia = new Referencia(this.nombreReferencia, this.ocupacionReferencia, this.parentesco, this.telefonoReferencia);
-    this.referenciaService.save(referencia).subscribe(data => {
-      
-    })
-    const laboral = new Laboral(this.nombreEmpresa, this.direccionEmpresa, this.telefonoEmpresa, this.nombreJefe, this.fechaInicio, this.fechaFin, this.cargo);
-    this.laboralService.save(laboral).subscribe(data => {
-      
-    })
-    const usuario = new Usuario(0, personal, estudio, referencia, laboral);
 
-    this.usuarioService.save(usuario).subscribe(
-      data => {
-        alert('Usuario añadido');
-      },
-      err => {
-        alert('Fallo');
-      }
+    if(this.identificacion == '' || this.nombre == '' || this.apellidos == '' || this.sexo == '' || this.email == '' || this.telefono == '' || this.direccion == '' || this.ocupacion == '' || this.estadoCivil == '' || this.nombreEstudio == '' || this.lugarGrado == '' || this.anio == null || this.nombreReferencia == '' || this.ocupacionReferencia == '' || this.parentesco == '' || this.telefonoReferencia == '' || this.nombreEmpresa == '' || this.direccionEmpresa == '' || this.telefonoEmpresa == '' || this.nombreJefe == '' || this.fechaInicio == null || this.fechaFin == null || this.cargo == ''   ) {
+      alert('Todos los campos son obligatorios');
+      return;
+    }
+
+    const personal = new Personal(
+      this.identificacion, this.nombre, this.apellidos, this.sexo, 
+      this.email, this.telefono, this.direccion, this.fechaNacimiento, 
+      this.ocupacion, this.estadoCivil
     );
+    const estudio = new Estudio(
+      this.nombreEstudio, this.lugarGrado, this.anio
+    );
+    const referencia = new Referencia(this.nombreReferencia, this.ocupacionReferencia, 
+      this.parentesco, this.telefonoReferencia
+    );
+    const laboral = new Laboral(
+      this.nombreEmpresa, this.direccionEmpresa, this.telefonoEmpresa, 
+      this.nombreJefe, this.fechaInicio, this.fechaFin, this.cargo
+    );
+
+
+      const usuario = new Usuario(0, personal, estudio, referencia, laboral);
+      this.usuarioService.save(usuario).subscribe(
+        data => {
+          alert('Usuario añadido');
+          this.router.navigate(['/lista']);
+        },
+        err => {
+          alert('Fallo');
+        }
+      );
+ 
   }
 }

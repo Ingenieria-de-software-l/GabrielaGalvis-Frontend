@@ -15,6 +15,7 @@ import { ListaGeneralComponent } from './lista/lista-general/lista-general.compo
 import { BienvenidaComponent } from './inicio/bienvenida/bienvenida.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
+import { UsuarioCardComponent } from './usuario-card/usuario-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usua
     ListaGeneralComponent,
     BienvenidaComponent,
     UsuarioComponent,
-    FormularioUsuarioComponent
+    FormularioUsuarioComponent,
+    UsuarioCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,83 +1,135 @@
-<form (ngSubmit)="onCreateUsuario()" novalidate #f="ngForm">
-    <div class="form1">
-        <h1>Formulario de Personal</h1>
-
-        <label> Identificacion </label>
-        <input type="text" [(ngModel)]="identificacion" name="identificacion" />
-
-        <label> Nombre </label>
-        <input type="text" [(ngModel)]="nombre" name="nombre" />
-
-        <label> Apellidos </label>
-        <input type="text" [(ngModel)]="apellidos" name="apellidos" />
-
-        <label> Sexo </label>
-        <input type="text" [(ngModel)]="sexo" name="sexo" />
-
-        <label> Email </label>
-        <input type="text" [(ngModel)]="email" name="email" />
-
-        <label> Telefono </label>
-        <input type="text" [(ngModel)]="telefono" name="telefono" />
-
-        <label> Direccion </label>
-        <input type="text" [(ngModel)]="direccion" name="direccion" />
-
-        <label> Fecha de Nacimiento </label>
-        <input type="date" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" />
-
-        <label> Ocupacion </label>
-        <input type="text" [(ngModel)]="ocupacion" name="ocupacion" />
-
-        <label> Estado Civil </label>
-        <input type="text" [(ngModel)]="estadoCivil" name="estadoCivil" />
-
-        <label> Nombre del instituto </label>
-        <input type="text" [(ngModel)]="nombreEstudio" name="nombre" />
-
-        <label> Lugar donde se graduo: </label>
-        <input type="text" [(ngModel)]="lugarGrado" name="lugar" />
-
-        <label> Año de grado </label>
-        <input type="date" [(ngModel)]="anio" name="anio" />
-
-        <label> Nombre de la empresa </label>
-        <input type="text" [(ngModel)]="nombreEmpresa" name="nombre">
-
-        <label>Direccion de la empresa</label>
-        <input type="text" [(ngModel)]="direccionEmpresa" name="direccion">
-
-        <label>Telefono de la empresa</label>
-        <input type="text" [(ngModel)]="telefonoEmpresa" name="telefono">
-
-        <label> Cargo </label>
-        <input type="text" [(ngModel)]="cargo" name="cargo">
-
-        <label>Nombre del jefe</label>
-        <input type="text" [(ngModel)]="nombreJefe" name="jefe">
-
-        <label>Fecha de inicio</label>
-        <input type="date" [(ngModel)]="fechaInicio" name="inicio">
-
-        <label>Fecha de fin</label>
-        <input type="date" [(ngModel)]="fechaFin" name="fin">
-
-        <label> Nombre de la referencia </label>
-        <input type="text" [(ngModel)]="nombreReferencia" name="nombre" />
-    
-        <label> Ocupacion </label>
-        <input type="text" [(ngModel)]="ocupacionReferencia" name="ocupacion" />
-    
-        <Label>Parentesco</Label>
-        <input type="text" [(ngModel)]="parentesco" name="parentesco" />
-    
-        <Label>Telefono</Label>
-        <input type="text" [(ngModel)]="telefonoReferencia" name="telefono" />
-
-        <div class="btn">
-            <div class="right">
-                <button>Guardar informacion</button>
-            </div>
+<form (ngSubmit)="onCreateUsuario()" novalidate #f="ngForm" class="container mt-4">
+    <div class="form1 row" >
+      <h1 class="text-center">Formulario de Personal</h1>
+  
+      <div class="col-3">
+        <label for="identificacion" class="form-label">Identificacion</label>
+        <input type="text" class="form-control" id="identificacion" [(ngModel)]="identificacion" name="identificacion" />
+      </div>
+  
+      <div class="col-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" name="nombre" />
+      </div>
+  
+      <div class="col-3">
+        <label for="apellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" [(ngModel)]="apellidos" name="apellidos" />
+      </div>
+  
+      <div class="col-3">
+        <label for="sexo" class="form-label">Sexo</label>
+        <input type="text" class="form-control" id="sexo" [(ngModel)]="sexo" name="sexo" />
+      </div>
+  
+      <div class="col-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" />
+      </div>
+  
+      <div class="col-3">
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="telefono" [(ngModel)]="telefono" name="telefono" />
+      </div>
+  
+      <div class="col-3">
+        <label for="direccion" class="form-label">Direccion</label>
+        <input type="text" class="form-control" id="direccion" [(ngModel)]="direccion" name="direccion" />
+      </div>
+  
+      <div class="col-3">
+        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="fechaNacimiento" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" />
+      </div>
+  
+      <div class="col-3">
+        <label for="ocupacion" class="form-label">Ocupacion</label>
+        <input type="text" class="form-control" id="ocupacion" [(ngModel)]="ocupacion" name="ocupacion" />
+      </div>
+  
+      <div class="col-3">
+        <label for="estadoCivil" class="form-label">Estado Civil</label>
+        <input type="text" class="form-control" id="estadoCivil" [(ngModel)]="estadoCivil" name="estadoCivil" />
+      </div>
+      <h1 class="text-center">Formulario de Estudios</h1>
+  
+      <div class="col-3">
+        <label for="nombreEstudio" class="form-label">Nombre del instituto</label>
+        <input type="text" class="form-control" id="nombreEstudio" [(ngModel)]="nombreEstudio" name="nombreEstudio" />
+      </div>
+  
+      <div class="col-3">
+        <label for="lugarGrado" class="form-label">Lugar donde se graduo</label>
+        <input type="text" class="form-control" id="lugarGrado" [(ngModel)]="lugarGrado" name="lugarGrado" />
+      </div>
+  
+      <div class="col-3">
+        <label for="anio" class="form-label">Año de grado</label>
+        <input type="date" class="form-control" id="anio" [(ngModel)]="anio" name="anio" />
+      </div>
+  
+      <h1 class="text-center">Formulario de Trabajo</h1>
+      <div class="col-3">
+        <label for="nombreEmpresa" class="form-label">Nombre de la empresa</label>
+        <input type="text" class="form-control" id="nombreEmpresa" [(ngModel)]="nombreEmpresa" name="nombreEmpresa" />
+      </div>
+  
+      <div class="col-3">
+        <label for="direccionEmpresa" class="form-label">Direccion de la empresa</label>
+        <input type="text" class="form-control" id="direccionEmpresa" [(ngModel)]="direccionEmpresa" name="direccionEmpresa" />
+      </div>
+  
+      <div class="col-3">
+        <label for="telefonoEmpresa" class="form-label">Telefono de la empresa</label>
+        <input type="text" class="form-control" id="telefonoEmpresa" [(ngModel)]="telefonoEmpresa" name="telefonoEmpresa" />
+      </div>
+  
+      <div class="col-3">
+        <label for="cargo" class="form-label">Cargo</label>
+        <input type="text" class="form-control" id="cargo" [(ngModel)]="cargo" name="cargo" />
+      </div>
+  
+      <div class="col-3">
+        <label for="nombreJefe" class="form-label">Nombre del jefe</label>
+        <input type="text" class="form-control" id="nombreJefe" [(ngModel)]="nombreJefe" name="nombreJefe" />
+      </div>
+  
+      <div class="col-3">
+        <label for="fechaInicio" class="form-label">Fecha de inicio</label>
+        <input type="date" class="form-control" id="fechaInicio" [(ngModel)]="fechaInicio" name="fechaInicio" />
+      </div>
+  
+      <div class="col-3">
+        <label for="fechaFin" class="form-label">Fecha de fin</label>
+        <input type="date" class="form-control" id="fechaFin" [(ngModel)]="fechaFin" name="fechaFin" />
+      </div>
+  
+      <h1 class="text-center">Formulario de Referencias</h1>
+      <div class="col-3">
+        <label for="nombreReferencia" class="form-label">Nombre de la referencia</label>
+        <input type="text" class="form-control" id="nombreReferencia" [(ngModel)]="nombreReferencia" name="nombreReferencia" />
+      </div>
+  
+      <div class="col-3">
+        <label for="ocupacionReferencia" class="form-label">Ocupacion</label>
+        <input type="text" class="form-control" id="ocupacionReferencia" [(ngModel)]="ocupacionReferencia" name="ocupacionReferencia" />
+      </div>
+  
+      <div class="col-3">
+        <label for="parentesco" class="form-label">Parentesco</label>
+        <input type="text" class="form-control" id="parentesco" [(ngModel)]="parentesco" name="parentesco" />
+      </div>
+  
+      <div class="col-3">
+        <label for="telefonoReferencia" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="telefonoReferencia" [(ngModel)]="telefonoReferencia" name="telefonoReferencia" />
+      </div>
+  
+      <div class="btn">
+        <div class="right">
+          <button type="submit" class="btn btn-primary">Guardar informacion</button>
         </div>
+      </div>
     </div>
-</form>
+  </form>
+  
